@@ -120,3 +120,28 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+
+LOGGING = {
+  'version': 1,
+  'disable_existing_loggers': False,
+  'formatters': {
+    'verbose': {
+        'format': '%(filename)s(%(lineno)d)|%(asctime)s|%(levelname)s| %(message)s'
+    },
+  },
+  'handlers': {
+    'file': {
+      'level': 'DEBUG',
+      'class': 'logging.FileHandler',
+      'formatter': 'verbose',
+      'filename': 'rtr.log',
+    },
+  },
+  'loggers': {
+    'django': {
+      'handlers': ['file'],
+      'level': 'DEBUG',
+      'propagate': True,
+    },
+  },
+}

@@ -8,4 +8,3 @@ admin.autodiscover()
 urlpatterns = [
   url(r'^my-models$', MyModelList.as_view(), name='my-model-list'),
 ]
-
