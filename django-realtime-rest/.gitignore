@@ -1,0 +1,9 @@
+*.pyc
+*~
+*.DS_Store
+*.~
+.coverage
+public/static/
+python_modules
+
+db.sqlite3
