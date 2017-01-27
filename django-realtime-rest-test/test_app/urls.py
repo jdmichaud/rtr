@@ -1,7 +1,7 @@
 from django.conf.urls import url, include
 from rest_framework import routers
 from test_app.views import MyModelViewSet
-from realtime_rest import RTView
+from realtime_rest.views import RTView
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin

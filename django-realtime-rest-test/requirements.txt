@@ -4,4 +4,4 @@ bpython # no version requirement, just take the last shiny one
 django-guardian==1.4.6 # For row-level permissions
 django-filter==1.0.1
 djangorestframework==3.5.3
--e git+https://github.com/jdmichaud/rtr.git@egg=subdir&subdirectory=django-realtime-rest
+-e git+https://github.com/jdmichaud/rtr.git#egg=django-realtime-rest&subdirectory=django-realtime-rest
