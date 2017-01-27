@@ -1,8 +1,8 @@
-from rest_framework.generics import ListCreateAPIView
+from rest_framework.viewsets import ModelViewSet
 from test_app.models import MyModel
 from serializers import MyModelSerializer
 
 
-class MyModelList(ListCreateAPIView):
+class MyModelViewSet(ModelViewSet):
   queryset = MyModel.objects.all()
   serializer_class = MyModelSerializer
