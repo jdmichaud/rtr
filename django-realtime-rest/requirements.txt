@@ -1,7 +1,0 @@
-django==1.10.3
-MySQL-python==1.2.5
-bpython # no version requirement, just take the last shiny one
-django-guardian==1.4.6 # For row-level permissions
-django-filter==1.0.1
-djangorestframework==3.5.3
-
