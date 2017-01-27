@@ -1,21 +1,21 @@
 # realtime_rest test application
 
-This is a simple application providing a model (MyModel) and a rest_framework ViewSet (MyModelViewSet). It uses the django-realtime-rest to allow long-polling.
+This is a simple application providing a model (`MyModel`) and a rest_framework ViewSet (`MyModelViewSet`). It uses the django-realtime-rest package to allow for [long-polling](https://en.wikipedia.org/wiki/Push_technology#Long_polling).
 
-Once the repo cloned this way:
+Clone the repo this way:
 ```
 git clone https://github.com/jdmichaud/rtr
 ```
-Install the environment:
+Install the environment (you might want to create a [virtualenv](https://virtualenv.pypa.io/en/stable/) before):
 ```
 cd rtr/django-realtime-rest-test/
 pip install -r requirements.txt
 ```
-This will install django, the rest_framework, realtime_rest and a couple of other dependencies.
+
+This will install `django`, the `rest_framework` package, `realtime_rest` package and a couple of other dependencies.
 
 Then, migrate the application:
 ```
-source python_modules/bin/activate
 python manage.py migrate
 ```
 
@@ -29,13 +29,13 @@ Finally you can test the long-polling feature. First, perform a GET request on t
 curl -siL -w'\n' -X GET localhost:8000/api/my-models-rt/ -H 'Content-Type: application/json'
 ```
 
-The call will block.
+The call will block (long-polling).
 Then POST something in the database:
 ```
 curl -siL -w'\n' -X POST -d '{ "myField": "test" }' localhost:8000/api/my-models/ -H "Content-Type: application/json"
 ```
 
-The first curl request will return displaying the content of the database:
+The first curl request will return, displaying the content of the database:
 ```
 HTTP/1.0 200 OK
 Date: Fri, 27 Jan 2017 19:46:37 GMT
