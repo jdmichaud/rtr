@@ -7,9 +7,3 @@ from django.db.models.signals import post_save
 
 class MyModel(models.Model):
   myField = models.CharField(max_length=128)
-
-
-@receiver(post_save, sender=MyModel)
-def my_model_saved(sender, **kwargs):
-  print sender
-  print kwargs
