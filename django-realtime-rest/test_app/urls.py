@@ -11,6 +11,6 @@ router = routers.DefaultRouter()
 router.register(r'my-models', MyModelViewSet)
 
 urlpatterns = [
-  url(r'^', include(router.urls)),
-  # url(r'^', include(RTView.as_view(r'my-models', MyModelViewSet))),
+  # url(r'^', include(router.urls)),
+  url(r'^', include(RTView.as_view(r'my-models', MyModelViewSet))),
 ]
