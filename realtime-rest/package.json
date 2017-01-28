@@ -1,6 +1,6 @@
 {
   "name": "realtime-rest",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "A small long-polling client provided with the django-realtime-rest package.",
   "main": "index.js",
   "scripts": {
@@ -15,5 +15,10 @@
     "realtime"
   ],
   "author": "jean.daniel.michaud@gmail.com",
-  "license": "BSD-2-Clause"
+  "license": "BSD-2-Clause",
+  "devDependencies": {
+    "eslint": "^3.14.1",
+    "eslint-config-airbnb-base": "^11.0.1",
+    "eslint-plugin-import": "^2.2.0"
+  }
 }
