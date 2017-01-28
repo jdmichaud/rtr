@@ -1,0 +1,19 @@
+{
+  "name": "realtime-rest",
+  "version": "0.1.0",
+  "description": "A small long-polling client provided with the django-realtime-rest package.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jdmichaud/rtr/realtime-rest"
+  },
+  "keywords": [
+    "rest",
+    "realtime"
+  ],
+  "author": "jean.daniel.michaud@gmail.com",
+  "license": "BSD-2-Clause"
+}
