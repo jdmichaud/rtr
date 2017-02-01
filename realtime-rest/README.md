@@ -9,9 +9,10 @@ a long-polling call.
 To try it in node.js, just create an RTView object and then call monitor:
 ```
 var realtime_rest = require('realtime_test');
-const rt_view = realtime_rest.RTView('localhost:8000/api/my-models-rt/', function (data) {
+const rtView = realtime_rest.RTView('localhost:8000/api/my-models-rt/', function (data) {
   console.log(data);
 }, realtime_rest.nodeGet);
+rtView.monitor();
 ```
 
 If you work with angular, RTView can take a third parameter which will be the
@@ -22,6 +23,7 @@ const rtView = RTView('/api/my-models-rt/', function (data) {
     // Do something with the data, which is a Javascript object
   });
 }, $http.get);
+rtView.monitor();
 ```
 
 ### Get function
