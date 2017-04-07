@@ -8,7 +8,7 @@ a long-polling call.
 
 To try it in node.js, just create an RTView object and then call monitor:
 ```
-var realtime_rest = require('realtime_test');
+var realtime_rest = require('realtime_rest');
 const rtView = realtime_rest.RTView('localhost:8000/api/my-models-rt/', function (data) {
   console.log(data);
 }, realtime_rest.nodeGet);
@@ -35,7 +35,7 @@ get which shall follow the following specifications:
 
 1. It shall take a url as string
 2. It shall return a ES6 promise which resolve an object containing a data field
-which points to string of data received like:
+which points to a JSON object:
 ```
 {
   data: '[{"myField": "foo"}]',
